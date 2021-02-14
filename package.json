@@ -1,0 +1,16 @@
+{
+  "name": "maiden-remote-repl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Szymon Kaliski <hi@szymonkaliski.com> (http://szymonkaliski.com)",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^7.4.3",
+    "yargs": "^16.2.0"
+  }
+}
