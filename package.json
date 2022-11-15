@@ -1,6 +1,6 @@
 {
   "name": "maiden-remote-repl",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -10,7 +10,7 @@
   "author": "Szymon Kaliski <hi@szymonkaliski.com> (http://szymonkaliski.com)",
   "license": "MIT",
   "dependencies": {
-    "ws": "^7.4.3",
-    "yargs": "^16.2.0"
+    "ws": "^8.11.0",
+    "yargs": "^17.6.2"
   }
 }

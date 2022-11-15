@@ -13,9 +13,15 @@ const args = yargs
   })
   .help().argv;
 
-const ws = new WebSocket(`ws://${args.host}:5555/`, ["bus.sp.nanomsg.org"]);
+const ws = new WebSocket(`ws://${args.host}:5555/`, ["bus.sp.nanomsg.org"], {
+  handshakeTimeout: 1000,
+});
+
+console.log(`Connecting to ${args.host}...`);
 
 ws.on("open", () => {
+  console.log("Connected!");
+
   // if we have a `send [msg]` then send it and quit
   if (args.msg) {
     ws.send(`${args.msg}\n`);
@@ -43,4 +49,8 @@ ws.on("open", () => {
 
 ws.on("error", (e) => {
   console.log(e.toString());
+});
+
+ws.on("close", () => {
+  console.log("Connection closed, exiting...");
 });
