@@ -42,7 +42,7 @@ ws.on("open", () => {
   });
 
   ws.on("message", (data) => {
-    console.log(data.trim());
+    console.log(data.toString().trim());
     rl.prompt();
   });
 });
